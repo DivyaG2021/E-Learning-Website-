@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link href="~/css/Img/Buttons.css" rel="stylesheet" />*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Javascript Course</h2>
+            <ul>
+                <li><a asp-action="JS1" target="_blank">Javascript Introduction</a></li>
+                <li> <a asp-action="JS2" target="_parent">Javascript Datatypes</a></li>
+                <li><a asp-action="JS3" target="_parent">Javascript Events</a></li>
+                <li><a asp-action="JS4" target="_parent">HTML Arrays</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+
+        </div>
+        <div class="main_content">
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="JS1" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="JS3" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                <h2 style="text-align:center"><b>Javascript Datatypes</b></h2>
+                <hr/>
+
+                <p>JavaScript variables can hold different data types: numbers, strings, objects and more:</p>
+                <p>
+                    let length = 16;                               // Number
+                    let lastName = "Johnson";                      // String
+                    let x = {firstName:"John", lastName:"Doe"};    // Object
+                </p>
+
+                <h4>The Concept of Datatypes</h4>
+
+                In programming, data types is an important concept.
+                To be able to operate on variables, it is important to know something about the type.
+                Without data types, a computer cannot safely solve this:  let x = 16 + "Volvo";
+                <p>
+                    Does it make any sense to add "Volvo" to sixteen? Will it produce an error or will it produce a result?
+
+                    JavaScript will treat the example above as: let x = "16" + "Volvo";
+                </p>
+
+                <h4>Javascript Strings</h4>
+                <p>
+                    A string (or a text string) is a series of characters like "John Doe".
+
+                    Strings are written with quotes. You can use single or double quotes:
+                </p>
+                <p> let carName1 = "Volvo XC60";   // Using double quotes</p>
+                <p> let carName2 = 'Volvo XC60';   // Using single quotes</p>
+                <h4>Javascript Numbers</h4>
+                <p>
+                    JavaScript has only one type of numbers.
+
+                    Numbers can be written with, or without decimals:
+                </p>
+                <p> let x1 = 34.00;     // Written with decimals</p>
+                <p>let x2 = 34;        // Written without decimals</p>
+                <h4>Javascript Boolean</h4>
+                <p>
+                    Booleans can only have two values: true or false.
+                    Booleans are often used in conditional testing.
+                    You will learn more about conditional testing later in this tutorial.
+                </p>
+                <p>(x == y)       // Returns true</p>
+                <p>(x == z)       // Returns false</p>
+                <h4>Javascript Arrays</h4>
+                <p>
+                    JavaScript arrays are written with square brackets.
+                    Array items are separated by commas.
+                    The following code declares (creates) an array called cars, containing three items (car names):
+                </p>
+                <p>const cars = ["Saab", "Volvo", "BMW"];</p>
+                <div class="buttons">
+                    <a asp-action="JS1" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="JS3" target="_parent" class="next">Next &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

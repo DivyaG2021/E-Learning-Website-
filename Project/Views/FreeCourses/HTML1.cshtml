@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link href="~/css/Img/Buttons.css" rel="stylesheet" />*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <h2>HTML Course</h2>
+                <ul>
+                    <li><a asp-action="HTML1" target="_blank">HTML Introduction</a></li>
+                    <li> <a asp-action="HTML2" target="_parent">HTML Attributes</a></li>
+                    <li><a asp-action="HTML3" target="_parent">HTML Forms</a></li>
+                    <li><a asp-action="HTML4" target="_parent">HTML Styling</a></li>
+                    <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                    <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="main_content">
+                <div class="info">
+                    <div class="buttons">
+
+                        <a asp-action="HTML2" target="_parent" class="next">Next &raquo;</a>
+                    </div>
+                    @*<h2 style="text-align:center;"><strong>Welcome to HTML Course</strong></h2>
+        <h2 style="text-align:center;"><strong>HTML Introduction</strong></h2>*@
+                    <h2 style="text-align:center;"><b>Welcome to HTML Course</b></h2>
+                    <hr />
+
+                    <p>HTML is the standard markup language for creating Web pages.</p>
+                    <h3> What is HTML?</h3>
+                    <ul>
+                        <li>HTML stands for Hyper Text Markup Language</li>
+                        <li>
+                            HTML is the standard markup language for creating Web pages
+                        </li>
+                        <li>HTML describes the structure of a Web page</li>
+                        <li>HTML elements tell the browser how to display the content</li>
+                        <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+                    </ul>
+                    <h3>A Simple HTML Document</h3>
+<pre style="font-size:25px; color:black; line-height:25px;">
+   &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+         &lt;head&gt;
+            &lt;Page Title&gt;
+         &lt;head&gt;
+         &lt;body&gt;
+                &lt;My First Heading&gt;
+                &lt;My first paragraph.&gt;
+        &lt;body&gt;
+    &lt;html&gt;
+</pre>
+                    <div class="buttons">
+
+                        <a asp-action="HTML2" target="_parent" class="next">Next &raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

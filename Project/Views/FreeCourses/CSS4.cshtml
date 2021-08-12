@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link href="~/css/Img/Buttons.css" rel="stylesheet" />*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <h2>CSS Course</h2>
+                <ul>
+                    <li><a asp-action="CSS1" target="_blank">CSS Introduction</a></li>
+                    <li> <a asp-action="CSS2" target="_parent">CSS Backgrounds</a></li>
+                    <li><a asp-action="CSS3" target="_parent">CSS Navigation</a></li>
+                    <li><a asp-action="CSS4" target="_parent">CSS Dropdown</a></li>
+                    <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                    <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="main_content">
+                <div class="info">
+                    <div class="buttons">
+                        <a asp-action="CSS3" target="_parent" class="previous">&laquo; Previous</a>
+                        <a asp-action="#" target="_parent" class="next">Go to Quiz &raquo;</a>
+                    </div>
+                    @*<h2 style="text-align:center;"><strong>CSS Introduction</strong></h2>*@
+                    <h2 style="text-align:center;"><b>Welcome to CSS Course</b></h2>
+                    <hr />
+
+                    <p>
+                        Create a hoverable dropdown with CSS.
+                    </p>
+                    <h3>Basic DropDown</h3>
+                    <pre style="font-size: 15px; color: #757575; line-height: 25px;">
+    &lt;div class="dropdown"&gt;
+       &lt;button class="dropbtn"&gt;Dropdown&lt;button&gt;
+           &lt;div class="dropdown-content"&gt;
+            &lt;a href="#&gt;Link 1 &lt;a&gt;
+            &lt;a href="#"&gt;Link 2 &lt;a&gt;
+            &lt;a href="#"&gt;Link 3 &lt;a&gt;
+        &lt;div&gt;
+    &lt;div&gt;
+</pre>
+                    <div class="buttons">
+                        <a asp-action="CSS3" target="_parent" class="previous">&laquo; Previous</a>
+                        <a asp-controller="Quiz" asp-action="Index" target="_blank" class="next">Go to Quiz &raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

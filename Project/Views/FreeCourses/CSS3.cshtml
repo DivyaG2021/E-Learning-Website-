@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @* <link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link href="~/css/Img/Buttons.css" rel="stylesheet" />*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>CSS Course</h2>
+            <ul>
+                <li><a asp-action="CSS1" target="_blank">CSS Introduction</a></li>
+                <li> <a asp-action="CSS2" target="_parent">CSS Backgrounds</a></li>
+                <li><a asp-action="CSS3" target="_parent">CSS Navigation</a></li>
+                <li><a asp-action="CSS4" target="_parent">CSS Dropdown</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="CSS2" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="CSS4" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                @*<h2 style="text-align:center;"><strong>CSS Introduction</strong></h2>*@
+                <h2 style="text-align:center;"><b>Welcome to CSS Course</b></h2>
+                <hr />
+
+                <h3>Navigation Bars</h3>
+                <p>
+                    THaving easy-to-use navigation is important for any web site.
+                    With CSS you can transform boring HTML menus into good-looking navigation bars.
+                </p>
+                <h3>Navigation Bar = List of Links</h3>
+                <p>
+                    A navigation bar needs standard HTML as a base.
+                    In our examples we will build the navigation bar from a standard HTML list.
+                    A navigation bar is basically a list of links, so using the ul and li elements makes perfect sense.
+                </p>
+                <pre style="font-size: 15px; color: #757575; line-height: 25px;">
+        &lt;li&gt; &lt;a href="default.asp"&gt;Home &lt;a&gt; &lt;li&gt;
+        &lt;li&gt; &lt;a href="news.asp"&gt;New   &lt;a&gt; &lt;li&gt;
+        &lt;li&gt; &lt;a href="contact.asp"&gt;Contact &lt;a&gt; &lt;li&gt;
+        &lt;li&gt; &lt;a href="about.asp"&gt;About   &lt;a&gt; &lt;li&gt;
+</pre>
+                <div class="buttons">
+                    <a asp-action="CSS2" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="CSS4" target="_parent" class="next">Next &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

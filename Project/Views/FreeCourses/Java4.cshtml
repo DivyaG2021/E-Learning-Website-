@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    @*<header id="header">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#home"></a>Courses</li>
+                </ul>
+            </nav>
+            <div class="fas fa-bars"></div>
+        </header>*@
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Java Course</h2>
+            <ul class="nav-item">
+                <li><a asp-action="Java1" target="_blank">Java Introduction</a></li>
+                <li><a asp-action="Java2" target="_parent">Java Syntax</a></li>
+                <li><a asp-action="Java3" target="_parent">JavaOperator</a></li>
+                <li><a asp-action="Java4" target="_parent">Java Methods</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+
+        </div>
+        <div class="main_content">
+            @*<div class="header">Welcome to the Java Course</div>*@
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="Java3" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-controller="Quiz" asp-action="Index" target="_blank" class="next">Go to Quiz &raquo;</a>
+                </div>
+                <h2 style="text-align:center"><b>Welcome To Java course</b></h2>
+                <hr />
+                <div>
+                    <h1 class="text-primary">Java Methods</h1>
+                </div><br>
+                <p>A <span class="font-weight-bold">method</span> is a block of code which only runs when it is called.</p>
+                <p>ou can pass data, known as parameters, into a method.</p>
+                <p>Methods are used to perform certain actions, and they are also known as <span class="font-weight-bold">functions.</span></p>
+                <p>Why use methods? To reuse code: define the code once, and use it many times.</p>
+                <br>
+                <h1 class="font-weight-bold">Create a Method</h1><br>
+                <p>A method must be declared within a class. It is defined with the name of the method, followed by parentheses (). Java provides some pre-defined methods, such as <span class="text-danger" style="background-color:lightgray">System.out.println()</span>, but you can also create your own methods to perform certain actions:</p><br>
+                @*<div>
+            <img src="~/images/JavaCreateMethod.png">
+        </div><br>*@
+                <pre>
+                public class Main {
+                  static void myMethod() {
+                    // code to be executed
+                  }
+                }
+            </pre>
+
+                <h1>Example Explained</h1><br>
+                <ul>
+                    <li><span class="text-danger" style="background-color:lightgray">myMethod()</span> is the name of the method</li>
+                    <li><span class="text-danger" style="background-color:lightgray">static</span> means that the method belongs to the Main class and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial.</li>
+                    <li><span class="text-danger" style="background-color:lightgray">void</span> means that this method does not have a return value.</li>
+
+                </ul><br>
+
+                <h1 class="font-weight-bold">Call a Method</h1><br>
+                <p>To call a method in Java, write the method's name followed by two parentheses () and a semicolon;</p>
+                <p>In the following example, <span class="text-danger" style="background-color:lightgray">myMethod()</span> is used to print a text (the action), when it is called:</p>
+                <br>
+                <pre>
+public class Main {
+  static void myMethod() {
+    System.out.println("I just got executed!");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
+</pre>
+                <div class="buttons">
+                    <a asp-action="Java3" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-controller="Quiz" asp-action="Index" target="_blank" class="next">Go to Quiz &raquo;</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

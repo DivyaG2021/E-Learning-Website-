@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+<body>
+    @*<header id="header">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#home"></a>Courses</li>
+                </ul>
+            </nav>
+            <div class="fas fa-bars"></div>
+        </header>*@
+
+    <div class="wrapper">
+
+        <div class="sidebar">
+            <h2>C# Course</h2>
+            <ul class="nav-item">
+                <li><a asp-action="CSHARP1" target="_blank">C# Introduction</a></li>
+                <li><a asp-action="CSHARP2" target="_parent">C# Syntax</a></li>
+                <li><a asp-action="CSHARP3" target="_parent">C# Data Types</a></li>
+                <li><a asp-action="CSHARP4" target="_parent">C# OOP</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+
+
+        </div>
+        <div class="main_content">
+            @*<div class="header">Welcome to the C# Course</div>*@
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="CSHARP2" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="CSHARP4" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                <h2 style="text-align:center"><b>Welcome To C# course</b></h2>
+                <hr />
+                <div>
+                    <h1 class="text-primary">C# Data Types</h1>
+                </div>
+                <div>A data type specifies the size and type of variable values. It is important to use the correct data type for the corresponding variable; to avoid errors, to save time and memory, but it will also make your code more maintainable and readable. The most common data types are:</div><br>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Size</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>4 bytes</td>
+                        <td>Stores whole numbers from -2,147,483,648 to 2,147,483,647</td>
+                    </tr>
+                    <tr>
+                        <td>long</td>
+                        <td>8 bytes</td>
+                        <td>Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                    </tr>
+                    <tr>
+                        <td>float</td>
+                        <td>4 bytes</td>
+                        <td>Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>8 bytes</td>
+                        <td>Stores fractional numbers. Sufficient for storing 15 decimal digits</td>
+                    </tr>
+                    <tr>
+                        <td>bool</td>
+                        <td>1 bit</td>
+                        <td>Stores true or false values</td>
+                    </tr>
+                    <tr>
+                        <td>char</td>
+                        <td>2 bytes</td>
+                        <td>Stores a single character/letter, surrounded by single quotes</td>
+                    </tr>
+                    <tr>
+                        <td>string</td>
+                        <td>2 bytes per character</td>
+                        <td>Stores a sequence of characters, surrounded by double quotes</td>
+
+                    </tr>
+                </table>
+                <br>
+                <h1 class="font-weight-bold">Integer Types</h1><br>
+                <h2 class="font-weight-bold">Int</h2>
+                <p>
+                    The int data type can store whole numbers from -2147483648 to 2147483647. In general, and in our tutorial, the int data type is the preferred data type when we create variables with a numeric value.
+                </p><br>
+                <h2 class="font-weight-bold">Long</h2>
+                <p>
+                    The long data type can store whole numbers from -9223372036854775808 to 9223372036854775807. This is used when int is not large enough to store the value. Note that you should end the value with an "L":
+                </p><br>
+
+                <h1 class="font-weight-bold">Floating Point Types</h1>
+                <p>You should use a floating point type whenever you need a number with a decimal, such as 9.99 or 3.14515.</p><br>
+                <h2 class="font-weight-bold">Float</h2>
+                <p>The float data type can store fractional numbers from 3.4e−038 to 3.4e+038. Note that you should end the value with an "F":</p>
+                <h2 class="font-weight-bold">Double</h2>
+                <p>The double data type can store fractional numbers from 1.7e−308 to 1.7e+308. Note that you can end the value with a "D" (although not required):</p><br>
+
+                <h1 class="font-weight-bold">Booleans</h1>
+                <p>A boolean data type is declared with the bool keyword and can only take the values true or false:</p><br>
+
+                <h1 class="font-weight-bold">Characters</h1>
+                <p>The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':</p><br>
+
+                <h1 class="font-weight-bold">Strings</h1>
+                <p>The string data type is used to store a sequence of characters (text). String values must be surrounded by double quotes:</p>
+
+                <div class="buttons">
+                    <a asp-action="CSHARP2" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="CSHARP4" target="_parent" class="next">Next &raquo;</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+<body>
+    @*<header id="header">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#home"></a>Courses</li>
+                </ul>
+            </nav>
+            <div class="fas fa-bars"></div>
+        </header>*@
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Java Course</h2>
+            <ul class="nav-item">
+                <li><a asp-action="Java1" target="_blank">Java Introduction</a></li>
+                <li><a asp-action="Java2" target="_parent">Java Syntax</a></li>
+                <li><a asp-action="Java3" target="_parent">JavaOperator</a></li>
+                <li><a asp-action="Java4" target="_parent">Java Methods</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+
+        </div>
+        <div class="main_content">
+            @*<div class="header">Welcome to the Java Course</div>*@
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="Java2" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="Java4" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                <h2 style="text-align:center"><b>Welcome To Java course</b></h2>
+                <hr />
+                <div>
+                    <h1 class="text-primary">Java Operators</h1>
+                </div><br>
+
+                <div>
+
+                    <p>Operators are used to perform operations on variables and values.</p>
+                    <p>In the example below, we use the + operator to add together two values:</p><br>
+                    <p><span class="text-info">int</span> x  =  <span class="text-danger"> 45 + 50</span>;</p><br>
+                    <p>The name of the java file must match the class name. When saving the file, save it using the class name and add ".java" to the end of the filename. To run the example above on your computer, make sure that Java is properly installed</p>
+                    <p>Although the + operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:</p><br>
+                    <p><span class="text-info">int</span> sum1 = <span class="text-danger"> 45 + 50</span>;</p>
+                    <p><span class="text-info">int</span> sum2 = sum1 + <span class="text-danger"> 50</span>;</p>
+                    <p><span class="text-info">int</span> sum3 = sum1 + sum2;</p><br>
+                    <p>Java divides the operators into the following groups:</p><br>
+                    <ul class="list-group">
+                        <li>Arithmetic operators</li>
+                        <li>Assignment operators</li>
+                        <li>Comparison operators</li>
+                        <li>Logical operators</li>
+                        <li>Games</li>
+                        <li>Bitwise operators</li>
+                    </ul>
+                    <br>
+                    <h1 class="font-weight-bold">Arithmetic Operators</h1><br>
+                    <p>Arithmetic operators are used to perform common mathematical operations.</p><br>
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Operator</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>Addition</td>
+                            <td>Adds together two values</td>
+                            <td>x + y</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Subtraction</td>
+                            <td>Subtracts one value from another</td>
+                            <td>x - y</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplication</td>
+                            <td>Multiplies two values</td>
+                            <td>x * y</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>Division</td>
+                            <td>Divides one value by another</td>
+                            <td>x / y</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Modulus</td>
+                            <td>Returns the division remainder</td>
+                            <td>x % y</td>
+                        </tr>
+                        <tr>
+                            <td>++</td>
+                            <td>Increment</td>
+                            <td>Increases the value of a variable by 1</td>
+                            <td>++x</td>
+                        </tr>
+                        <tr>
+                            <td>--</td>
+                            <td>Decrement</td>
+                            <td>Decreases the value of a variable by 1</td>
+                            <td>--x</td>
+
+                        </tr>
+                    </table>
+                    <br>
+                    <h1 class="font-weight-bold">Java Assignment Operators</h1><br>
+                    <p>Assignment operators are used to assign values to variables.</p><br>
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Operator</th>
+                            <th>Example</th>
+                            <th>Same As</th>
+                        </tr>
+                        <tr>
+                            <td>=</td>
+                            <td>x = 5</td>
+                            <td>x = 5</td>
+
+                        </tr>
+                        <tr>
+                            <td>+=</td>
+                            <td>x += 3</td>
+                            <td>x = x + 3</td>
+
+                        </tr>
+                        <tr>
+                            <td>-=</td>
+                            <td>x -= 3</td>
+                            <td>x = x - 3</td>
+
+                        </tr>
+                        <tr>
+                            <td>*=</td>
+                            <td>x *= 3</td>
+                            <td>x = x * 3</td>
+
+                        </tr>
+                        <tr>
+                            <td>/=</td>
+                            <td>x /= 3</td>
+                            <td>x = x / 3</td>
+
+                        </tr>
+                        <tr>
+                            <td>%=</td>
+                            <td>x %= 3</td>
+                            <td>x = x % 3</td>
+
+                        </tr>
+                        <tr>
+                            <td>&=</td>
+                            <td>x &= 3</td>
+                            <td>x = x & 3</td>
+
+
+                        </tr>
+                    </table>
+                    <br>
+                    <h1 class="font-weight-bold">Java Comparison Operators</h1><br>
+                    <p>Comparison operators are used to compare two values:</p><br>
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Operator</th>
+                            <th>Name</th>
+
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>==</td>
+                            <td>Equal to</td>
+                            <td>x == y</td>
+
+                        </tr>
+                        <tr>
+                            <td>!=</td>
+                            <td>Not equal</td>
+                            <td>x != y</td>
+
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td>Greater than</td>
+                            <td>x > y</td>
+
+                        </tr>
+                        <tr>
+                            <td><</td>
+                            <td>Less than</td>
+                            <td>x < y</td>
+
+                        </tr>
+                        <tr>
+                            <td>>=</td>
+                            <td>Greater than or equal to</td>
+                            <td>x >= y</td>
+
+                        </tr>
+                        <tr>
+                            <td><=</td>
+                            <td>Less than or equal to</td>
+                            <td>x <= y</td>
+
+                        </tr>
+
+                    </table>
+                    <br>
+                    <h1 class="font-weight-bold">Java Logical Operators</h1><br>
+                    <p>Logical operators are used to determine the logic between variables or values:</p><br>
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Operator</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>&&</td>
+                            <td>Logical and</td>
+                            <td>Returns true if both statements are true</td>
+                            <td>x < 5 &&  x < 10</td>
+                        </tr>
+                        <tr>
+                            <td>|| </td>
+                            <td>Logical or</td>
+                            <td>Returns true if one of the statements is true</td>
+                            <td>x < 5 || x < 4</td>
+                        </tr>
+                        <tr>
+                            <td>!</td>
+                            <td>Logical not</td>
+                            <td>Reverse the result, returns false if the result is true</td>
+                            <td>!(x < 5 && x < 10)</td>
+
+                        </tr>
+
+                    </table>
+                    <br>
+
+
+                </div>
+                <div class="buttons">
+                    <a asp-action="Java2" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="Java4" target="_parent" class="next">Next &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

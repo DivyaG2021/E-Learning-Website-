@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link href="~/css/Img/Buttons.css" rel="stylesheet" />*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Welcome </h2>
+            <h2>HTML Course</h2>
+            <ul>
+                <li><a asp-action="Course1" target="_blank">HTML Introduction</a></li>
+                <li> <a asp-action="HTML2" target="_blank">HTML Attributes</a></li>
+                <li><a asp-action="HTML3" target="_blank">HTML Forms</a></li>
+                <li><a asp-action="HTML4" target="_blank">HTML Styling</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+
+        </div>
+        <div class="main_content">
+            <div class="info">
+                @*<h2 style="text-align:center"><b>HTML Styles</b></h2>*@
+                <div class="buttons">
+                    <a asp-action="HTML3" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-controller="Quiz" asp-action="Index" target="_blank" class="next">Go to Quiz &raquo;</a>
+                </div>
+                <h2 style="text-align:center;"><b>Welcome to HTML Course</b></h2>
+                <hr />
+                <p>The HTML style attribute is used to add styles to an element, such as color, font, size, and more.</p>
+                <h3>The HTML Style Attribute</h3>
+                <p>
+                    Setting the style of an HTML element, can be done with the style attribute.
+
+                    The HTML style attribute has the following syntax:
+                </p>
+                <p>&lt;tagname style="property:value;"&gt;</p>
+                <h3>Different types of styles</h3>
+
+                <ul>
+                    <li>1.Use the style attribute for styling HTML elements</li>
+                    <li>2.Use background-color for background color</li>
+                    <li>3.Use color for text colors</li>
+                    <li>4.Use font-family for text fonts</li>
+                    <li>5.Use font-size for text sizes</li>
+                    <li>Use text-align for text alignment</li>
+                </ul>
+
+
+                <div class="buttons">
+                    <a asp-action="HTML3" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-controller="Quiz" asp-action="Index" target="_blank" class="next">Go to Quiz &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

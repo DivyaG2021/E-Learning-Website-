@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instructions</title>
+    <link href="~/css/app.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body style="background-color :darkkhaki">
+    @*<ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>*@
+    <div class="qcontainer">
+        <div id="end" class="qflex-center qflex-column">
+            <p style="color :black; font-size : 3em;"> Congratulations, your score is : </p>
+            <h1 id="finalscore" style="color : black"> </h1>
+            <h4 id=" grades"> ..........</h4>
+
+
+            <a class="qbtn" href="@Url.Action("StartQuiz", "Quiz")" target="_self">
+                Retry
+            </a>
+            <a class="qbtn" href="@Url.Action("Index", "Quiz")" target="_self">
+                Home
+            </a>
+        </div>
+    </div>
+    <script src="~/js/end.js"></script>
+</body>
+</html>

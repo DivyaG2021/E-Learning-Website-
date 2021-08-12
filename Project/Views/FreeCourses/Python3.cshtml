@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+<body>
+    @*<header id="header">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#home"></a>Courses</li>
+                </ul>
+            </nav>
+            <div class="fas fa-bars"></div>
+        </header>*@
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Python Course</h2>
+            <ul class="nav-item">
+                <li><a asp-action="Python1" target="_blank">Python Introduction</a></li>
+                <li><a asp-action="Python2" target="_parent">Python Syntax</a></li>
+                <li><a asp-action="Python3" target="_parent">Python Lists</a></li>
+                <li><a asp-action="Python4" target="_parent">Python Regex</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+
+        </div>
+        <div class="main_content">
+            @*<div class="header">Welcome to the Python Course</div>*@
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="Python2" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="Python4" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                <h2 style="text-align:center;"><b>Welcome to Python Course</b></h2>
+                <hr />
+                <div>
+                    <h1 class="text-primary">Python Python Lists</h1>
+                </div><br>
+                <h2 class="font-weight-bold">List</h2>
+                <p>Lists are used to store multiple items in a single variable.</p>
+                <p>Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are Tuple, Set, and Dictionary, all with different qualities and usage.</p>
+                <p>Lists are created using square brackets:</p>
+                @*<div>
+            <img src="~/images/JavaSyntax.png">
+        </div><br>*@
+                <pre>
+                    thislist = ["apple", "banana", "cherry"]
+                    print(thislist)
+                 </pre>
+
+                <h1 class="font-weight-bold">List Items</h1><br>
+                <p>List items are ordered, changeable, and allow duplicate values.</p>
+                <p>List items are indexed, the first item has index [0], the second item has index [1] etc.</p><br>
+
+                <h1 class="font-weight-bold">Ordered</h1><br>
+                <p>When we say that lists are ordered, it means that the items have a defined order, and that order will not change.</p>
+                <p>If you add new items to a list, the new items will be placed at the end of the list.</p>
+                <br>
+
+                <h1 class="font-weight-bold">Changeable</h1><br>
+                <p>The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.</p><br>
+
+                <h1 class="font-weight-bold">Allow Duplicates</h1><br>
+                <p>Since lists are indexed, lists can have items with the same value:</p><br>
+                @*<div>
+            <img src="~/images/JavaSyntax.png">
+        </div><br>*@
+                <pre>
+                 thislist = ["apple", "banana", "cherry", "apple", "cherry"]
+                 print(thislist)
+            </pre>
+
+
+                <h1 class="font-weight-bold">List Length</h1><br>
+                <p>To determine how many items a list has, use the len() function:</p><br>
+                @*<div>
+            <img src="~/images/JavaSyntax.png">
+        </div><br>*@
+                <pre>
+                    thislist = ["apple", "banana", "cherry"]
+                    print(len(thislist))
+            </pre>
+
+                <h1 class="font-weight-bold">List Items - Data Types</h1><br>
+                <p>List items can be of any data type:</p><br>
+                @*<div>
+        <img src="~/images/JavaSyntax.png">
+            </div><br>*@
+
+                <pre>
+               list1 = ["apple", "banana", "cherry"]
+               list2 = [1, 5, 7, 9, 3]
+               list3 = [True, False, False]
+
+               print(list1)
+               print(list2)
+               print(list3)
+             </pre>
+
+                <h1 class="font-weight-bold">Python Collections (Arrays)</h1><br>
+                <p>There are four collection data types in the Python programming language:</p>
+                <ul>
+                    <li>List is a collection which is ordered and changeable. Allows duplicate members.</li>
+                    <li>Tuple is a collection which is ordered and unchangeable. Allows duplicate members.</li>
+                    <li>Set is a collection which is unordered and unindexed. No duplicate members.</li>
+                    <li>Dictionary is a collection which is ordered* and changeable. No duplicate members.</li>
+
+                </ul><br>
+                <p>When choosing a collection type, it is useful to understand the properties of that type. Choosing the right type for a particular data set could mean retention of meaning, and, it could mean an increase in efficiency or security.</p>
+                <div class="buttons">
+                    <a asp-action="Python2" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="Python4" target="_parent" class="next">Next &raquo;</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

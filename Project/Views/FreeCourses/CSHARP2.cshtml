@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+<body>
+    @*<header id="header">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#home"></a>Courses</li>
+                </ul>
+            </nav>
+            <div class="fas fa-bars"></div>
+        </header>*@
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>C# Course</h2>
+            <ul class="nav-item">
+                <li><a asp-action="CSHARP1" target="_blank">C# Introduction</a></li>
+                <li><a asp-action="CSHARP2" target="_parent">C# Syntax</a></li>
+                <li><a asp-action="CSHARP3" target="_parent">C# Data Types</a></li>
+                <li><a asp-action="CSHARP4" target="_parent">C# OOP</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+
+            </ul>
+
+        </div>
+        <div class="main_content">
+            @*<div class="header">Welcome to the C# Course</div>*@
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="CSHARP1" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="CSHARP3" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                <h2 style="text-align:center"><b>Welcome To Java course</b></h2>
+                <hr />
+                <div>
+                    <h1 class="text-primary">C# Syntax</h1>
+                </div><br>
+                @*<div>
+            <img src="~/images/CsharpSyntax.png">
+        </div><br>*@
+                <pre>
+                     using System;
+
+                     namespace HelloWorld
+                     {
+                        class Program
+                        {
+                           static void Main(string[] args)
+                           {
+                               Console.WriteLine("Hello World!");    
+                           }
+                        }
+                     }
+                </pre>
+                <div>
+                    <span class="font-weight-bold">Line 1: </span><span class="text-danger" style="background-color:lightgray">using System</span> means that we can use classes from the <span class="text-danger" style="background-color:lightgray">System</span> namespace.
+                    <p><span class="font-weight-bold">Line 2: </span>A blank line. C# ignores white space. However, multiple lines makes the code more readable.</p>
+                    <p><span class="font-weight-bold">Line 3: </span><span class="text-danger" style="background-color:lightgray">namespace</span> is a used to organize your code, and it is a container for classes and other namespaces.</p>
+                    <p><span class="font-weight-bold">Line 4: </span>The curly braces <span class="text-danger" style="background-color:lightgray">{}</span> marks the beginning and the end of a block of code.</p>
+                    <p><span class="font-weight-bold">Line 5: </span><span class="text-danger" style="background-color:lightgray">class</span> is a container for data and methods, which brings functionality to your program. Every line of code that runs in C# must be inside a class. In our example, we named the class Program.</p>
+                    <p><span class="font-weight-bold">Line 6: </span>Another thing that always appear in a C# program, is the <span class="text-danger" style="background-color:lightgray">Main</span> method. Any code inside its curly brackets {} will be executed. You don't have to understand the keywords before and after Main. You will get to know them bit by bit while reading this tutorial.</p>
+                    <p><span class="font-weight-bold">Line 7: </span><span class="text-danger" style="background-color:lightgray">Console</span> is a class of the <span class="text-danger" style="background-color:lightgray">System</span> namespace, which has a <span class="text-danger" style="background-color:lightgray">WriteLine()</span> method that is used to output/print text. In our example it will output "Hello World!".</p>
+                    <p><span class="font-weight-bold">Line 8: </span>If you omit the using System line, you would have to write <span class="text-danger" style="background-color:lightgray">System.Console.WriteLine()</span> to print/output text.</p>
+                    <br>
+
+                </div>
+                <div class="buttons">
+                    <a asp-action="CSHARP1" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="CSHARP3" target="_parent" class="next">Next &raquo;</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

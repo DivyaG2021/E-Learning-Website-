@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Animated Online Education Website Design Tutorial</title>
+    <link rel="stylesheet" href="fonts/font-awesome.css">
+    <link rel="stylesheet" href="fonts/google-fonts.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery.js"></script>
+    <link href="~/css/Index.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/js/site.js"></script>
+
+    @*<style>
+            .left, .right
+            {
+                float: left; 
+                width: 20%; /* The width is 20%, by default */
+
+            }
+            .main 
+            {
+                float: left;
+                width: 60%; /* The width is 60%, by default */
+
+            }/* Use a media query to add a breakpoint at 800px: */
+            @media screen and (max-width: 800px) 
+            {
+            .left, .main, .right 
+             {   
+                  width: 100%; /* The width is 100%, when the viewport is 800px or smaller */  
+             }
+            }
+        </style>*@
+</head>
+<body>
+
+    <!-- header section starts  -->
+    @*<header id="header">
+
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#course">courses</a></li>
+                    <li><a href="#service">services</a></li>
+                    <li><a href="#testimonial">testimonials</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="fas fa-bars"></div>
+
+        </header>*@
+
+    <!-- header section ends -->
+    <!-- home section starts  -->
+
+
+    <section id="home" class="container-fluid">
+
+        <div class="row align-items-center min-vh-100 content">
+
+            <div class="col-md-8 ml-md-5 text-center text-sm-left">
+
+                <h2>Online Education</h2>
+                <h3>Learn online from home</h3>
+
+                <a href="#freecourse"><button> Start Learning >></button></a>
+
+                <div class="icons">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- home section ends -->
+    <!-- course section starts  -->
+
+    <section id="freecourse">
+
+        <h1 class="heading">Free courses</h1>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="flip-right">
+
+                <img src="~/css/Images/html (2).jpg" />
+                @*<a href="C:\Users\912157\source\repos\E-Learning\E-Learning\Views\Home\FreeCourses.cshtml" target="_blank">HTML</a>*@
+                @Html.ActionLink("HTML", "HTML1","FreeCourses")
+            </div>
+
+            <div class="box" data-aos="flip-down">
+
+                <img src="~/css/Images/css (2).jpg" />
+                @Html.ActionLink("CSS", "CSS1", "FreeCourses")
+            </div>
+
+            <div class="box" data-aos="flip-left">
+
+                <img src="~/css/Images/js (2).png" />
+                @Html.ActionLink("JS", "JS1", "FreeCourses")
+            </div>
+
+            <div class="box" data-aos="flip-right">
+
+                <img src="~/css/Images/python.jpg" />
+                @Html.ActionLink("Python", "Python1", "FreeCourses")
+            </div>
+
+            <div class="box" data-aos="flip-up">
+
+                <img src="~/css/Images/Java.png" />
+                @Html.ActionLink("Java", "Java1", "FreeCourses")
+            </div>
+
+            <div class="box" data-aos="flip-right">
+                <img src="~/css/Images/csharp.png" />
+                @Html.ActionLink("C#", "CSHARP1", "FreeCourses")
+            </div>
+
+        </div>
+
+    </section>
+
+    @*<section id="paidcourse">
+
+        <h1 class="heading">Paid courses</h1>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="flip-right">
+
+                <img src="~/css/Images/html (2).jpg" />
+                @*<a href="C:\Users\912157\source\repos\E-Learning\E-Learning\Views\Home\FreeCourses.cshtml" target="_blank">HTML</a>
+                @Html.ActionLink("HTML", "HTMLVideo")
+            </div>
+
+            <div class="box" data-aos="flip-down">
+
+                <img src="~/css/Images/css (2).jpg" />
+                @Html.ActionLink("CSS", "CSS1")
+            </div>
+
+            <div class="box" data-aos="flip-left">
+
+                <img src="~/css/Images/js (2).png" />
+                @Html.ActionLink("JS", "JS1")
+            </div>
+
+            <div class="box" data-aos="flip-right">
+
+                <img src="~/css/Images/python.jpg" />
+                @Html.ActionLink("Python", "Python")
+            </div>
+
+            <div class="box" data-aos="flip-up">
+
+                <img src="~/css/Images/Java.png" />
+                @Html.ActionLink("Java", "Java")
+            </div>
+
+            <div class="box" data-aos="flip-right">
+                <img src="~/css/Images/csharp.png" />
+                @Html.ActionLink("C#", "CSHARP")
+            </div>
+        </div>
+
+    </section>*@
+
+    <!-- course section ends -->
+    <!-- service section starts  -->
+
+    <section id="service">
+
+        <h1 class="heading">what we offer?</h1>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="flip-up">
+                <img src="images/service1.svg" alt="">
+                <div class="info">
+                    <h2>skilled teachers</h2>
+                    <p>Highly trained proffessionals , with more than 20 years experience and PhDs are provided for your learning. </p>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-down">
+                <img src="images/service2.svg" alt="">
+                <div class="info">
+                    <h2>24x7 hours service</h2>
+                    <p>We monitor the changes in the field and update our data all the time, any new update in any language , we got it here !!</p>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-up">
+                <img src="images/service3.svg" alt="">
+                <div class="info">
+                    <h2>certificate distribution</h2>
+                    <p>At the end of each course you complete , we offer you a Certificate along with the analysis we obtain from your Quiz responce. </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- service section ends -->
+    <!-- testimonials section starts  -->
+
+    <section id="testimonial">
+
+        <h1 class="heading">what our students says</h1>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="flip-left">
+
+                <img src="~/css/Images/pic1.jpg" />
+                <div class="info">
+                    <p>I learned HTML and CSS from this amazing website. 
+                    The Quiz part was a very usefull resource here. 
+                    I am now signing up for another course here.</p>
+                    <h2>Swapna</h2>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-right">
+
+                <img src="~/css/Images/pic2.jpg" />
+                <div class="info">
+                    <p>
+                        There was only very little material for basic knowledge
+                        of MVC and Angular. I hope you add some real time code used for MVC.
+                    </p>
+                    <h2>Jake</h2>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-left">
+
+                <img src="~/css/Images/pic3.jpg" />
+                <div class="info">
+                    <p>
+                        Every course they offer has a Quiz at the end.
+                        I learned C# and Java within a span of 4 weeks.
+                    </p>
+                    <h2>Alex</h2>
+                </div>
+            </div>
+
+            <div class="box" data-aos="flip-right">
+
+                <img src="~/css/Images/pic4.jpg" />
+                <div class="info">
+                    <p>
+                        There was only very little material for basic knowledge
+                        of MVC and Angular. I hope you add some real time code used for MVC.
+                    </p>
+                    <h2>Shiva</h2>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- testimonials section ends -->
+    <!-- contact section starts  -->
+
+    <section id="contact" class="container-fluid">
+
+        <h1 class="heading">get in touch</h1>
+
+        <div class="row min-vh-75 align-items-center min-vw-100">
+
+            <div class="col-lg-5 col-md-8  mx-auto">
+
+                <form action="" data-aos="zoom-in">
+
+                    <div class="inputBox">
+                        <input type="text" required>
+                        <h3>full name</h3>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="email" required>
+                        <h3>e-mail</h3>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="number" required>
+                        <h3>phone</h3>
+                    </div>
+
+                    <div class="inputBox">
+                        <textarea name="" id="" cols="30" rows="10" required></textarea>
+                        <h3>message</h3>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="submit">
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- contact section ends -->
+    <!-- footer section starts  -->
+    @*<section id="footer">
+
+            <h1>&copy; copyright 2020 by <span>mr. web designer</span></h1>
+
+        </section>*@
+
+    <!-- footer section ends -->
+    <!-- script part start  -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 500
+        });
+    </script>
+
+
+</body>
+</html>

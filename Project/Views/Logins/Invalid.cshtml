@@ -1,0 +1,70 @@
+﻿@*@model Project.Models.Login
+
+    @{
+        ViewData["Title"] = "LCreate";
+    }
+
+    <h1>Login Form</h1>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="LCreate">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Username" class="control-label"></label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" type="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @Html.ActionLink("Click Here For Payment", "Create", "Payments")
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }*@
+@model Project.Models.Login
+
+@{
+    ViewData["Title"] = "Registration";
+}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Login Form</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <style>
+       
+    </style>
+</head>
+
+<body style="justify-content:center;justify-items:center; background-color:lightblue;padding-top:150px">
+        <h1>Credentials are not correct . Please try again</h1>
+        
+                <div>
+                    @Html.ActionLink("Click here to Login", "Lcreate", "Logins")
+                </div>
+
+        
+
+</body>
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

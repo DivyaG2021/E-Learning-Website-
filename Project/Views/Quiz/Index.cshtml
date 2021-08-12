@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Quiz</title>
+    <link href="~/css/app.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body style="background-color :darkkhaki">
+
+
+    <div class="qcontainer">
+        <div id="qhome" class="qflex-center qflex-column">
+            <h1> Quiz Time</h1>
+            <a class="qbtn" href="@Url.Action("StartQuiz", "Quiz")" target="_self">Start </a>
+
+            <a class="qbtn" href="@Url.Action("Instructions", "Quiz")" target="_self"> Instructions </a>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

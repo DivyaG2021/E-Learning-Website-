@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+<body>
+    @*<header id="header">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#home"></a>Courses</li>
+                </ul>
+            </nav>
+            <div class="fas fa-bars"></div>
+        </header>*@
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Java Course</h2>
+            <ul class="nav-item">
+                <li><a asp-action="Java1" target="_blank">Java Introduction</a></li>
+                <li><a asp-action="Java2" target="_parent">Java Syntax</a></li>
+                <li><a asp-action="Java3" target="_parent">JavaOperator</a></li>
+                <li><a asp-action="Java4" target="_parent">Java Methods</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+
+        </div>
+        <div class="main_content">
+            @*<div class="header">Welcome to the Java Course</div>*@
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="Java1" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="Java3" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                <h2 style="text-align:center"><b>Welcome To Java course</b></h2>
+                <hr />
+                <div>
+                    <h1 class="text-primary">Java Syntax</h1>
+                </div><br>
+                <pre>
+                            public class Main {
+                                public static void main(String[] args) {
+                                   System.out.println("Hello World");
+                                 }
+                            }
+                 </pre>
+                <div>
+                    <p>Every line of code that runs in Java must be inside a <span class="text-danger" style="background-color:lightgray">class</span>. In our example, we named the class Main. A class should always start with an uppercase first letter.</p>
+                    <p><span class="font-weight-bold">Note:</span> Java is case-sensitive: "MyClass" and "myclass" has different meaning.</p>
+                    <p>The name of the java file must match the class name. When saving the file, save it using the class name and add ".java" to the end of the filename. To run the example above on your computer, make sure that Java is properly installed</p>
+                    <br>
+                    <h1 class="font-weight-bold">The main Method</h1><br>
+                    <p> <span class="text-info">public static void </span> <span class="font-weight-bold text-danger">main</span>(<span class="text-danger">String[]</span>  args)</p>
+                    <br>
+                    <p>The <span class="text-danger" style="background-color:lightgray">main()</span> method is required and you will see it in every Java program:</p><br>
+
+                    <h1 class="font-weight-bold">System.out.println()</h1><br>
+                    <p>Inside the <span class="text-danger" style="background-color:lightgray">main()</span> method, we can use the <span class="text-danger" style="background-color:lightgray">println()</span> method to print a line of text to the screen:</p>
+                    <br>
+                    @*<div>
+                <img src="~/images/JavaSystemOut.png">
+            </div><br>*@
+                    <pre>
+                     public static void main(String[] args) {
+                       System.out.println("Hello World");
+                     }
+                </pre>
+
+
+                </div>
+                <div class="buttons">
+                    <a asp-action="Java1" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="Java3" target="_parent" class="next">Next &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

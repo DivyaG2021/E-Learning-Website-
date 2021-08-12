@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    @*<header id="header">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#home"></a>Courses</li>
+                </ul>
+            </nav>
+            <div class="fas fa-bars"></div>
+        </header>*@
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Python Course</h2>
+            <ul class="nav-item">
+                <li><a asp-action="Python1" target="_blank">Python Introduction</a></li>
+                <li><a asp-action="Python2" target="_parent">Python Syntax</a></li>
+                <li><a asp-action="Python3" target="_parent">Python Lists</a></li>
+                <li><a asp-action="Python4" target="_parent">Python Regex</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+
+            </ul>
+
+        </div>
+        <div class="main_content">
+            @*<div class="header">Welcome to the Python Course</div>*@
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="Python3" class="previous">&laquo; Previous</a>
+                    <a asp-controller="Quiz" asp-action="Index" target="_blank" class="next">Go to Quiz &raquo;</a>
+                </div>
+                <h2 style="text-align:center;"><b>Welcome to Python Course</b></h2>
+                <hr />
+                <h1 class="font-weight-bold">Python RegEx</h1>
+                <p>A RegEx, or Regular Expression, is a sequence of characters that forms a search pattern.</p>
+                <p>RegEx can be used to check if a string contains the specified search pattern.</p><br>
+
+                <h1 class="font-weight-bold">RegEx Module</h1>
+                <p>Python has a built-in package called re, which can be used to work with Regular Expressions.</p>
+                <p>Import the re module:</p>
+                <span class="text-info">import re</span><br>
+
+                <h1 class="font-weight-bold">RegEx ModuleRegEx in Python</h1>
+                <p>When you have imported the re module, you can start using regular expressions:</p><br>
+                <span class="text-info">import re</span><br>
+                <br>
+                <span>txt = </span><span class="text-danger">"The Ran in Spain"</span><br>
+                <span>x = re.search</span><span class="text-danger">"The.*Spain$"</span><span>, txt</span><br><br>
+
+                <h1 class="font-weight-bold">RegEx Functions</h1><br>
+                <p>The re module offers a set of functions that allows us to search a string for a match:</p>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Function</th>
+                        <th>Description</th>
+
+                    </tr>
+                    <tr>
+                        <td>findall</td>
+                        <td>Returns a list containing all matches</td>
+
+                    </tr>
+                    <tr>
+                        <td>search</td>
+                        <td>Returns a Match object if there is a match anywhere in the string</td>
+
+                    </tr>
+                    <tr>
+                        <td>split</td>
+                        <td>Returns a list where the string has been split at each match</td>
+
+                    </tr>
+                    <tr>
+                        <td>sub</td>
+                        <td>Replaces one or many matches with a string</td>
+
+                    </tr>
+
+                </table>
+                <br>
+                <h1 class="font-weight-bold">Metacharacters</h1><br>
+                <p>Metacharacters are characters with a special meaning:</p><br>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Character</th>
+                        <th>Description</th>
+                        <th>Example</th>
+
+                    </tr>
+                    <tr>
+                        <td>[]</td>
+                        <td>A set of characters</td>
+                        <td>"[a-m]"</td>
+
+                    </tr>
+                    <tr>
+                        <td>\</td>
+                        <td>Signals a special sequence (can also be used to escape special characters)</td>
+                        <td>"\d"</td>
+                        <td>x - y</td>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>Any character (except newline character)</td>
+                        <td>"he..o"</td>
+
+                    </tr>
+                    <tr>
+                        <td>^</td>
+                        <td>Starts with</td>
+                        <td>"^hello"</td>
+
+                    </tr>
+                    <tr>
+                        <td>$</td>
+                        <td>Ends with</td>
+                        <td>"world$"</td>
+
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Zero or more occurrences</td>
+                        <td>"aix*"</td>
+
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>One or more occurrences</td>
+                        <td>"aix+"</td>
+
+
+                    </tr>
+                </table>
+                <br>
+                <h1 class="font-weight-bold">Special Sequences</h1><br>
+                <p>A special sequence is a \ followed by one of the characters in the list below, and has a special meaning:</p><br>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Character</th>
+                        <th>Description</th>
+                        <th>Example</th>
+
+                    </tr>
+                    <tr>
+                        <td>\A</td>
+                        <td>Returns a match if the specified characters are at the beginning of the string</td>
+                        <td>"\AThe"</td>
+
+                    </tr>
+                    <tr>
+                        <td>\b</td>
+                        <td>Returns a match where the specified characters are at the beginning or at the end of a word</td>
+                        <td>r"\bain"</td>
+
+                    </tr>
+                    <tr>
+                        <td>\B</td>
+                        <td>Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word</td>
+                        <td>r"\Bain"</td>
+
+                    </tr>
+                    <tr>
+                        <td>\d</td>
+                        <td>Returns a match where the string contains digits (numbers from 0-9)</td>
+                        <td>"\d"</td>
+
+                    </tr>
+                    <tr>
+                        <td>\D</td>
+                        <td>Returns a match where the string DOES NOT contain digits</td>
+                        <td>"\D"</td>
+
+                    </tr>
+                    <tr>
+                        <td>\s</td>
+                        <td>Returns a match where the string contains a white space character</td>
+                        <td>"\s"</td>
+
+                    </tr>
+                    <tr>
+                        <td>\S</td>
+                        <td>Returns a match where the string DOES NOT contain a white space character</td>
+                        <td>"\S"</td>
+
+
+                    </tr>
+                </table>
+                <br>
+                <h1 class="font-weight-bold">Sets</h1><br>
+                <p>A set is a set of characters inside a pair of square brackets [] with a special meaning:</p><br>
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Set</th>
+                        <th>Description</th>
+
+                    </tr>
+                    <tr>
+                        <td>[arn]</td>
+                        <td>Returns a match where one of the specified characters (a, r, or n) are present</td>
+
+                    </tr>
+                    <tr>
+                        <td>[a-n]</td>
+                        <td>Returns a match for any lower case character, alphabetically between a and n</td>
+
+                    </tr>
+                    <tr>
+                        <td>[^arn]</td>
+                        <td>Returns a match for any character EXCEPT a, r, and n</td>
+
+                    </tr>
+                    <tr>
+                        <td>[0123]</td>
+                        <td>Returns a match where any of the specified digits (0, 1, 2, or 3) are present</td>
+
+                    </tr>
+                    <tr>
+                        <td>[0-9]</td>
+                        <td>Returns a match for any digit between 0 and 9</td>
+
+                    </tr>
+                    <tr>
+                        <td>[0-5][0-9]</td>
+                        <td>Returns a match for any two-digit numbers from 00 and 59</td>
+
+                    </tr>
+                    <tr>
+                        <td>[a-zA-Z]</td>
+                        <td>Returns a match for any character alphabetically between a and z, lower case OR upper case</td>
+
+
+                    </tr>
+                </table>
+                <br>
+                <div class="buttons">
+                    <a asp-action="Python3" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-controller="Quiz" asp-action="Index" target="_blank" class="next">Go to Quiz &raquo;</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

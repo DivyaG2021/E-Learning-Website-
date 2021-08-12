@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link href="~/css/Img/Buttons.css" rel="stylesheet" />*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>HTML Course</h2>
+            <ul>
+                <li><a asp-action="HTML1" target="_blank">HTML Introduction</a></li>
+                <li> <a asp-action="HTML2" target="_parent">HTML Attributes</a></li>
+                <li><a asp-action="HTML3" target="_parent">HTML Forms</a></li>
+                <li><a asp-action="HTML4" target="_parent">HTML Styling</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+
+        </div>
+        <div class="main_content">
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="HTML2" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="HTML4" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                @*<h2 style="text-align:center"><b>HTML Forms</b></h2>*@
+
+                <h2 style="text-align:center;"><b>Welcome to HTML Course</b></h2>
+                <hr />
+                <p>An HTML form is used to collect user input. The user input is most often sent to a server for processing.</p>
+                <h3>The form Element</h3>
+                <p>The form element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+                <h3>The input Element</h3>
+                <p>
+                    The HTML input element is the most used form element.
+
+                    An input element can be displayed in many ways, depending on the type attribute.
+                </p>
+                <c>Here are some examples:</c>
+                <p>&lt;input type="text"&gt;	Displays a single-line text input field</p>
+                <p>&lt;input type="radio"&gt;	Displays a radio button (for selecting one of many choices)</p>
+                <p>&lt;input type="checkbox"&gt;	Displays a checkbox (for selecting zero or more of many choices)</p>
+                <p>&lt;input type="submit"&gt;	Displays a submit button (for submitting the form)</p>
+                <p>&lt;input type="button"&gt;	Displays a clickable button</p>
+                <div class="buttons">
+                    <a asp-action="HTML2" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="HTML4" target="_parent" class="next">Next &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

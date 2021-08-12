@@ -1,0 +1,413 @@
+﻿@*@model Project.Models.Payments
+
+    @{
+        ViewData["Title"] = "Create";
+    }
+    <html>
+    <head>
+
+    </head>
+    <body>
+        <h3>Create</h3>
+        <h4 style="text-align:center">Payment Form</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <form style="font-size:2rem;" asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label asp-for="Subscription" class="control-label"></label><br />
+                        <span style="padding-left:6px;">
+                            <input type="radio" id="bas"
+                                   onclick="Basic()" asp-for="Subscription" value="Basic" />Basic
+                        </span>
+                        <span style="padding-left:6px;">
+                            <input type="radio" id="std"
+                                   oninput="Basic()" asp-for="Subscription" value="Standard" />Standard
+                        </span>
+                        <span style="padding-left:6px;">
+                            <input type="radio" id="pre"
+                                   onclick="Basic()" asp-for="Subscription" value="Premium" />Premium
+                        </span>
+                        @*<span style="padding-left:6px;"><input id="basic" type="radio" asp-for="Subscription" value="Basic" onclick="Basic()" /> Basic</span>
+            <span style="padding-left:6px;"><input id="vip" type="radio" asp-for="Subscription" value="Standard" onclick="Basic()" /> Standard</span>
+            <span style="padding-left:6px;"><input id="premium" type="radio" asp-for="Subscription" value="Premium" onclick="Basic()" /> Premium</span> <br />
+                        <span asp-validation-for="Subscription" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CardNumber" class="control-label"></label>
+                        <input asp-for="CardNumber" placeholder="16 Digit Card Number" class="form-control" />
+                        <span asp-validation-for="CardNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CVV" class="control-label"></label>
+                        <input type="password" placeholder="CVV" asp-for="CVV" class="form-control" />
+                        <span asp-validation-for="CVV" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ExpiryDate" class="control-label"></label>
+                        <input asp-for="ExpiryDate" placeholder="MM/YY" class="form-control" />
+                        <span asp-validation-for="ExpiryDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Amount" class="control-label"></label>
+                        <input type="text" style="font-size:2rem;" id="price" asp-for="Amount" class="form-control" />
+                        <span asp-validation-for="Amount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        @*<script>
+            function Basic() {
+                // alert('hello')
+                if (document.getElementById('basic').checked) {
+                    document.getElementById('price').value = 199;
+                }
+
+                else if (document.getElementById('vip').checked) {
+                    document.getElementById("price").value = 399;
+                }
+
+                else
+                    document.getElementById("price").value = 599;
+            }
+        </script>
+    <script src="~/js/site.js"></script>
+    </body>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+    </html>*@
+@*@model Project.Models.Login
+
+    @{
+        ViewData["Title"] = "Registration";
+    }
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Login Form</title>
+        <link href="~/css/Registration.css" rel="stylesheet" />
+        <link href="~/css/site.css" rel="stylesheet" />
+        <style>
+            #captcha {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            #capt {
+                width: 170px;
+                height: 72px;
+                font-size: 20px;
+                background-color: #2C31CF;
+                padding: 5px;
+                border: none;
+                letter-spacing: 1px;
+                float: left;
+                color: #E9E91D;
+                border-radius: 5px 0 0 5px;
+            }
+
+            #refresh {
+                float: left;
+                background-color: #2C31CF;
+                height: 82px;
+                border-radius: 0 5px 5px 0;
+            }
+
+                #refresh img {
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+
+            #textinput {
+                width: 170px;
+                height: 70px;
+                font-size: 20px;
+                background-color: #252521;
+                border: none;
+                margin-left: 10px;
+                border-radius: 5px;
+                padding: 5px;
+                color: #D58A1E;
+            }
+
+            .form-group button {
+                padding: 8px 20px;
+                height: 35px;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                margin-left: 10px;
+                margin-top: 25px;
+                background-color: #764D11;
+                color: #CED4F0;
+                transition: -5s;
+            }
+
+                .form-group button:hover {
+                    background-color: white;
+                }
+        </style>
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="container">
+                <form asp-action="RCreate" method="post">
+                    <h3>If you are a new user fill the registration form.</h3>
+                    <h1>Registration Form</h1>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="textfield">
+                        <label asp-for="Name" class="textfield"></label>
+                        <input asp-for="Name" class="textfield" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="textfield">
+                        <label asp-for="Email" class="textfield"></label>
+                        <input asp-for="Email" class="textfield" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Gender" class="textfield"></label>
+                        <span style="padding-left:6px;"><input type="radio" asp-for="Gender" value="Male" />Male </span>
+                        <span style="padding-left:6px;"><input type="radio" asp-for="Gender" value="Female" />Female</span>
+                        <span style="padding-left:6px;"><input type="radio" asp-for="Gender" value="Others" />Others</span>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <div class="textfield">
+                        <label asp-for="Qualification" class="control-label"></label>
+                        <select asp-for="Qualification" asp-items="Html.GetEnumSelectList<Qualification>()">
+                            <option value="">---Select Qualification---</option>
+                        </select>
+                        <span asp-validation-for="Qualification" class="text-danger"></span>
+                    </div>
+                    <div class="textfield">
+                        <label asp-for="Username" class="textfield"></label>
+                        <input asp-for="Username" class="textfield" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="textfield">
+                        <label asp-for="Password" class="textfield"></label>
+                        <input asp-for="Password" class="textfield" type="password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="textfield">
+                        <label asp-for="ConfirmPassword" class="textfield"></label>
+                        <input asp-for="ConfirmPassword" class="textfield" type="password" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6" id="captcha">
+                            <input type="text" id="capt" readonly="readonly" />
+                            <div id="refresh" class="form-group col-md-6">
+                                <img src="https://img.icons8.com/ios-glyphs/30/000000/refresh--v2.png" onclick="cap()" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" id="textinput" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <button onclick="validcap()">Check</button>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Register" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+            </div>
+
+        <h3>If you are already an user.</h3>
+        @Html.ActionLink("Click Here To Login", "LCreate");
+
+
+
+    </body>
+    </html>
+    <script src="~/js/site.js"></script>
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }*@
+@*@model Project.Models.Login
+    <!DOCTYPE html>
+    <!-- Created By CodingNepal -->
+    <html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Responsive Contact us Form | CodingNepal</title>
+        <link href="~/css/Registration.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <div class="text">
+                Registration Form
+            </div>
+            <form action="#">
+                <div class="form-row">
+                    @*<div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label for="">First Name</label>
+            </div>
+                    <div class="input-data">
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" required />
+                        <div class="underline"></div>
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                        @*<input type="text" required>
+                <div class="underline"></div>
+                <label for="">First Name</label>
+                    </div>
+                    <div class="input-data">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" required />
+                        <div class="underline"></div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="input-data">
+                        <label asp-for="Gender"></label>
+                        <input type="radio" asp-for="Gender" value="Male" />Male
+                        <input type="radio" asp-for="Gender" value="Female" />Female
+                        <input type="radio" asp-for="Gender" value="Others" />Others
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <div class="input-data">
+                        <label asp-for="Qualification"></label>
+                        <select asp-for="Qualification" asp-items="Html.GetEnumSelectList<Qualification>()">
+                            <option value="">---Select Qualification---</option>
+                        </select>
+                        <span asp-validation-for="Qualification" class="text-danger"></span>
+                    </div>
+
+                    <div class="input-data">
+                        <label asp-for="Username"></label>
+                        <input asp-for="Username" required />
+                        <div class="underline"></div>
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="input-data">
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" required />
+                        <div class="underline"></div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="input-data">
+                        <label asp-for="ConfirmPassword"></label>
+                        <input asp-for="ConfirmPassword" required />
+                        <div class="underline"></div>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-data textarea">
+                            <textarea rows="8" cols="80" required></textarea>
+                            <br />
+                            <div class="underline"></div>
+                            <label for="">Write your message</label>
+                            <br />
+                            <div class="form-row submit-btn">
+                                <div class="input-data">
+                                    <div class="inner"></div>
+                                    <input type="submit" value="submit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+    </form>
+        </div>
+    </body>
+    </html>*@
+@model Project.Models.Payments
+
+@{ ViewData["Title"] = "Create"; }
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+    <style>
+
+        input[type=text], input[type=password], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=radio] {
+            height: 25px;
+            width: 25px
+        }
+
+    </style>
+</head>
+<body style="justify-content:center;justify-items:center; background-color:lightblue;padding-top:150px">
+    <div style="margin-left:280px">
+        <h1 style="margin-left:850px"><b>Payment Form</b></h1>
+        <div class="row">
+            <div class="col-md-8">
+                <form style="align-content:center;align-items:center;padding-left:400px;" asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Subscription" class="control-label"></label><br />
+                        <span style="padding-left: 6px;font-size: 2rem;">
+                            <input type="radio" id="bas"
+                                   onclick="Basic()" asp-for="Subscription" value="Basic" />Basic
+                        </span>
+                        <span style="padding-left:6px;font-size:2rem">
+                            <input type="radio" id="std"
+                                   oninput="Basic()" asp-for="Subscription" value="Standard" />Standard
+                        </span>
+                        <span style="padding-left:6px;font-size:2rem">
+                            <input type="radio" id="pre"
+                                   onclick="Basic()" asp-for="Subscription" value="Premium" />Premium
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-size:2rem;" asp-for="CardNumber" class="control-label"></label>
+                        <input type="text" asp-for="CardNumber" placeholder="Card Number" />
+                        <span asp-validation-for="CardNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                         <label asp-for="CVV" class="control-label"></label>
+                         <input type="password" placeholder="CVV" asp-for="CVV"  />
+                         <span asp-validation-for="CVV" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                         <label asp-for="ExpiryDate" class="control-label"></label>
+                         <input type="text" asp-for="ExpiryDate" placeholder="MM/YY"  />
+                         <span asp-validation-for="ExpiryDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                         <label asp-for="Amount" class="control-label"></label>
+                         <input type="text" style="font-size:2rem;" id="price" asp-for="Amount" placeholder="Amount"  />
+                         <span asp-validation-for="Amount" class="text-danger"></span>
+                    </div>
+      
+                    <div class="form-group">
+                        <input type="submit" style="padding:15px 35px; margin-left:480px;font-size:30px;align-items:center;" value="Pay" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

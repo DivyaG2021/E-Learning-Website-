@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link href="~/css/Img/Buttons.css" rel="stylesheet" />*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>CSS Course</h2>
+            <ul>
+                <li><a asp-action="CSS1" target="_blank">CSS Introduction</a></li>
+                <li> <a asp-action="CSS2" target="_parent">CSS Backgrounds</a></li>
+                <li><a asp-action="CSS3" target="_parent">CSS Navigation</a></li>
+                <li><a asp-action="CSS4" target="_parent">CSS Dropdown</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="CSS1" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="CSS3" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                @*<h2 style="text-align:center;"><strong>CSS Introduction</strong></h2>*@
+                <h2 style="text-align:center;"><b>Welcome to CSS Course</b></h2>
+                <hr />
+
+                <p>The CSS background properties are used to add background effects for elements.</p>
+                <h3> CSS background-color</h3>
+                <p>The background-color property specifies the background color of an element.</p>
+                <p>With CSS, a color is most often specified by:</p>
+                <ul>
+                    <li>1.  a valid color name - like "red"</li>
+                    <li>2.  a HEX value - like "#ff0000"</li>
+                    <li>3.  an RGB value - like "rgb(255,0,0)"</li>
+                </ul>
+                <h3>Other Elements</h3>
+                <p>You can set the background color for any HTML elements:</p>
+                <h4>Examples:</h4>
+                <c>Here, the h1, p, and div elements will have different background colors: </c>
+                <pre style="font-size: 15px; color: #757575; line-height: 25px;">
+            h1 {
+            background-color: green;
+            }
+            div {
+            background-color: lightblue;
+            }
+            p {
+            background-color: yellow;
+            }
+                </pre>
+                <div class="buttons">
+                    <a asp-action="CSS1" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="CSS3" target="_parent" class="next">Next &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

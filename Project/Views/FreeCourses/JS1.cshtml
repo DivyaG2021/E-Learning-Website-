@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link href="~/css/Img/Buttons.css" rel="stylesheet" />*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Javascript Course</h2>
+            <ul>
+                <li><a asp-action="JS1" target="_blank">Javascript Introduction</a></li>
+                <li> <a asp-action="JS2" target="_parent">Javascript Datatypes</a></li>
+                <li><a asp-action="JS3" target="_parent">Javascript Events</a></li>
+                <li><a asp-action="JS4" target="_parent">HTML Arrays</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+
+        </div>
+        <div class="main_content">
+            <div class="info">
+                <div class="buttons">
+                    @*<a asp-action="#" target="_blank" class="previous">&laquo; Previous</a>*@
+                    <a asp-action="JS2" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                <h2 style="text-align:center"><b>Welcome To JavaScript course</b></h2>
+                <hr/>
+
+                <p>JavaScript is a lightweight, cross-platform, and interpreted scripting language. It is well-known for the development of web pages, many non-browser environments also use it. JavaScript can be used for Client-side developments as well as Server-side developments. JavaScript contains a standard library of objects, like Array, Date, and Math, and a core set of language elements like operators, control structures, and statements. </p>
+                <h3>Javascript Syntax</h3>
+                <p>
+                    &lt;script&gt;
+                    // JavaScript Code
+                    &lt;script;&gt;
+                </p>
+                <pre style="font-size: 15px; color: #757575; line-height: 25px;">
+                <h4>Example:</h4>
+     &lt;!DOCTYPE html&gt;
+         &lt;html lang="en"&gt;
+            &lt;head&gt;
+              &lt;title&gt;
+                Basic Example to Describe JavaScript
+              &lt;title&gt;
+            &lt;head&gt;
+            &lt;body&gt;
+                &lt;!-- JavaScript code can be embedded inside head section or body section:&gt;
+                &lt;script&gt;
+                        console.log("Welcome to GeeksforGeeks");
+                &lt;script&gt;
+            &lt;body&gt;
+    &lt;html&gt;
+   </pre>
+                <h3>Features of Javascript</h3>
+
+                <p>
+                    According to a recent survey conducted by Stack Overflow, JavaScript is the most popular language on earth.
+                    With advances in browser technology and JavaScript having moved into the server with Node.js and other frameworks, JavaScript is capable of so much more.
+                </p>
+
+
+                <div class="buttons">
+                    <a asp-action="JS2" target="_parent" class="next">Next &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

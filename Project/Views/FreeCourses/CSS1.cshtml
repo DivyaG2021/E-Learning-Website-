@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link href="~/css/Img/Buttons.css" rel="stylesheet" />*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>CSS Course</h2>
+            <ul>
+                <li><a asp-action="CSS1" target="_blank">CSS Introduction</a></li>
+                <li> <a asp-action="CSS2" target="_parent">CSS Backgrounds</a></li>
+                <li><a asp-action="CSS3" target="_parent">CSS Navigation</a></li>
+                <li><a asp-action="CSS4" target="_parent">CSS Dropdown</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="info">
+                <div class="buttons">
+                    @*<a href="#" class="previous">&laquo; Previous</a>*@
+                    <a asp-action="CSS2" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                @*<h2 style="text-align:center;"><strong>CSS Introduction</strong></h2>*@
+                <h2 style="text-align:center;"><b>Welcome to CSS Course</b></h2>
+                <hr />
+                <p>CSS is the language we use to style a Web page.</p>
+                <h3> What is CSS?</h3>
+                <ul>
+                    <li>CSS stands for Cascading Style Sheets</li>
+                    <li>
+                        CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+                    </li>
+                    <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+                    <li>External stylesheets are stored in CSS files</li>
+                </ul>
+                <h3>Why Use CSS</h3>
+                <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+                <h4>Example of CSS:</h4>
+                <pre style="font-size: 15px; color: #757575; line-height: 25px;">
+             body {
+             background-color: lightblue;
+             }
+             h1 {
+             color: white;
+             text-align: center;
+             }
+             p {
+             font-family: verdana;
+             font-size: 20px;
+             }
+             </pre>
+                <div class="buttons">
+                    @*<a href="#" class="previous">&laquo; Previous</a>*@
+                    <a asp-action="CSS2" target="_parent" class="next">Next &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

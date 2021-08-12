@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+        <link href="~/css/Img/Buttons.css" rel="stylesheet" />*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+           
+            <h2>Javascript Course</h2>
+            <ul>
+                <li><a asp-action="JS1" target="_blank">Javascript Introduction</a></li>
+                <li> <a asp-action="JS2" target="_parent">Javascript Datatypes</a></li>
+                <li><a asp-action="JS3" target="_parent">Javascript Events</a></li>
+                <li><a asp-action="JS4" target="_parent">HTML Arrays</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+            </ul>
+
+        </div>
+        <div class="main_content">
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="JS3" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="#" target="_blank" class="next">Go to Quiz &raquo;</a>
+                </div>
+                <h2 style="text-align:center"><b>Javascript Arrays</b></h2>
+                <hr/>
+                <p>
+                    JavaScript arrays are used to store multiple values in a single variable.
+                </p>
+                <p>Example: const cars = ["Saab", "Volvo", "BMW"];</p>
+                <h3>What is an Array?</h3>
+                <p>An array is a special variable, which can hold more than one value at a time.</p>
+                <p>If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:</p>
+                <ul>
+                    <li>let car1 = "Saab";</li>
+                    <li>let car2 = "Volvo";</li>
+                    <li>let car3 = "BMW";</li>
+                </ul>
+                <p>
+                    However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?
+                    The solution is an array!
+                    An array can hold many values under a single name, and you can access the values by referring to an index number.
+                </p>
+                <h3>Creating an Array</h3>
+                <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+                <p>Syntax: const array_name = [item1, item2, ...];     </p>
+                <p>Syntax: const cars = ["Saab", "Volvo", "BMW"];</p>
+                <h3>Access the full Array</h3>
+                <p>With JavaScript, the full array can be accessed by referring to the array name:</p>
+                <p>const cars = ["Saab", "Volvo", "BMW"]; </p>
+                <p>document.getElementById("demo").innerHTML = cars;</p>
+                <h3>Arrays are objects</h3>
+                <p>Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.</p>
+                <p>But, JavaScript arrays are best described as arrays. </p>
+                <p>Arrays use numbers to access its "elements". In this example, person[0] returns John:</p>
+                <div class="buttons">
+                    <a asp-action="JS3" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-controller="Quiz" asp-action="Index" target="_blank" class="next">Go to Quiz &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

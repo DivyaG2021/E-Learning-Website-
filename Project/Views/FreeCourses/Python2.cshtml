@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    @*<link href="~/css/HTML.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>*@
+    <link href="~/css/FreeCourses.css" rel="stylesheet" />
+    <link href="~/css/buttons.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+<body>
+    @*<header id="header">
+            <a href="#" class="logo"><img src="images/logo.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#home"></a>Courses</li>
+                </ul>
+            </nav>
+            <div class="fas fa-bars"></div>
+        </header>*@
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Python Course</h2>
+            <ul class="nav-item">
+                <li><a asp-action="Python1" target="_blank">Python Introduction</a></li>
+                <li><a asp-action="Python2" target="_parent">Python Syntax</a></li>
+                <li><a asp-action="Python3" target="_parent">Python Lists</a></li>
+                <li><a asp-action="Python4" target="_parent">Python Regex</a></li>
+                <li><a asp-controller="Quiz" asp-action="Index" target="_blank">Quiz</a></li>
+                <li><a asp-controller="Feedbacks" asp-action="Create" target="_blank">Feedback</a></li>
+
+            </ul>
+
+        </div>
+        <div class="main_content">
+            @*<div class="header">Welcome to the Python Course</div>*@
+            <div class="info">
+                <div class="buttons">
+                    <a asp-action="Python1" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="Python3" target="_parent" class="next">Next &raquo;</a>
+                </div>
+                <h2 style="text-align:center;"><b>Welcome to Python Course</b></h2>
+                <hr />
+
+                <div>
+                    <h1 class="text-primary">Python Syntax</h1>
+                </div><br>
+
+                <p>Python syntax can be executed by writing directly in the Command Line:</p>
+
+                <pre>
+                    >>> print("Hello, World!")
+                    Hello, World!
+                </pre>
+
+                <p>Or by creating a python file on the server, using the .py file extension, and running it in the Command Line:</p><br>
+                <pre>
+                   C:\Users\Your Name>python myfile.py
+                </pre>
+
+
+                <h1 class="font-weight-bold">Python Indentation</h1>
+                <div>
+                    <p>Indentation refers to the spaces at the beginning of a code line. </p>
+                    <p>Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.</p>
+                    <p>Python uses indentation to indicate a block of code.</p><br>
+
+                    <pre>
+                       if 5 > 2:
+                          print("Five is greater than two!")
+                    </pre>
+
+                    <p>The number of spaces is up to you as a programmer, but it has to be at least one.</p><br>
+
+                    <pre>
+                        if 5 > 2:
+                           print("Five is greater than two!") 
+                        if 5 > 2:
+                           print("Five is greater than two!") 
+                    </pre>
+
+                    <pre>
+                    </pre>
+
+                    <h1 class="font-weight-bold">Python Variables</h1>
+                    <p>In Python, variables are created when you assign a value to it:</p><br>
+                    <p> x = <span class="text-danger">5</span></p>
+                    <p> y = <span class="text-danger"> "Hello, World!"</span></p>
+                    <br>
+                    <p>Python has no command for declaring a variable.</p><br>
+
+                    <h1 class="font-weight-bold">Comments</h1><br>
+                    <p>Python has commenting capability for the purpose of in-code documentation.</p><br>
+                    <p>Comments start with a #, and Python will render the rest of the line as a comment:</p>
+                    <br>
+                    <pre>
+                       #This is a comment.
+                       print("Hello, World!")
+                    </pre>
+                </div>
+                <div class="buttons">
+                    <a asp-action="Python1" target="_parent" class="previous">&laquo; Previous</a>
+                    <a asp-action="Python3" target="_parent" class="next">Next &raquo;</a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+</html>
